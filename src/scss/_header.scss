@@ -1,0 +1,47 @@
+@use "variables" as var;
+@use "mixins";
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+header {
+  background-color: #dec0f1;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10vh;
+  width: 100vw;
+
+  &__logo {
+    height: 60px;
+  }
+}
+.countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #efd9ce;
+
+  height: 5vh;
+  width: 100vw;
+
+  &__cake {
+    font-size: 1.5rem;
+    width: 10vw;
+  }
+
+  &__timer {
+    font-size: 1rem;
+    font-family: var.$text-font;
+    text-align: center;
+    color: white;
+    width: 40vw;
+  }
+}

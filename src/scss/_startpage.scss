@@ -1,0 +1,217 @@
+@use "variables" as var;
+@use "mixins";
+
+.hidden {
+  max-width: 100vw;
+  overflow: hidden;
+  &__under {
+    @include mixins.hidden__under;
+  }
+  &__right {
+    @include mixins.hidden__right;
+  }
+  &__left {
+    @include mixins.hidden__left;
+  }
+}
+
+.show {
+  @include mixins.show;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+.startpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #b79ced;
+  height: 85vh;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+
+  &__text {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 5px;
+  }
+}
+
+.rebuscountdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__timer {
+    font-family: var.$text-font;
+    font-size: 2rem;
+    margin: 5px;
+  }
+}
+
+.rebus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 200px;
+
+  &__title {
+    font-size: 1.5rem;
+    font-family: var.$title-font;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    height: 5vh;
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+
+  &__guess {
+    font-family: var.$text-font;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 50vw;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  &__btn {
+    margin: 5px;
+    font-family: var.$text-font;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 50vw;
+    background-color: rgb(161, 111, 181);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__result {
+    font-family: var.$text-font;
+    margin-top: 2px;
+  }
+}
+
+.mapcountdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__timer {
+    font-family: var.$text-font;
+    font-size: 2rem;
+    margin: 5px;
+  }
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 200px;
+
+  &__title {
+    font-size: 1.5rem;
+    font-family: var.$title-font;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    height: 5vh;
+    height: 250px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  &__guess {
+    font-family: var.$text-font;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 50vw;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  &__btn {
+    margin: 5px;
+    font-family: var.$text-font;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 50vw;
+    background-color: rgb(161, 111, 181);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__result {
+    font-family: var.$text-font;
+    margin-top: 2px;
+  }
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  margin: 20px;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 200px;
+  }
+
+  &__text {
+    width: 200px;
+    text-align: center;
+    font-family: var.$text-font;
+  }
+}

@@ -1,0 +1,51 @@
+@use "variables" as var;
+
+@mixin for-size($size) {
+  @if $size == mobile {
+    @media screen and (min-width: var.$mobile) {
+      @content;
+    }
+  }
+  @if $size == tablet {
+    @media screen and (min-width: var.$tablet) {
+      @content;
+    }
+  }
+  @if $size == laptop {
+    @media screen and (min-width: var.$laptop) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media screen and (min-width: var.$desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin hidden__under {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+@mixin hidden__right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%) rotate(45deg);
+  transition: all 0.5s;
+}
+
+@mixin hidden__left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+@mixin show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
