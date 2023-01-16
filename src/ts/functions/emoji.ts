@@ -54,7 +54,6 @@ export function emoji(container: HTMLDivElement) {
 }
 
 export function displayRebus(rebus: Rebus[], rebusContainer: HTMLDivElement) {
-  let finishedRebusGame: boolean = false;
   for (let i = 0; i < rebus.length; i++) {
     rebusContainer.innerHTML = "";
     const rebusForm: HTMLFormElement = document.createElement("form");
@@ -125,11 +124,7 @@ export function displayRebus(rebus: Rebus[], rebusContainer: HTMLDivElement) {
         if (rebusGuess.value.toLowerCase() == "gordon ramsey") {
           rebusResult.innerHTML = "Du gissade rätt";
           rebus[i].done = true;
-          finishedRebusGame = true;
-          localStorage.setItem(
-            "finishedRebusGame",
-            JSON.stringify(finishedRebusGame)
-          );
+
           countdownToMapGame(rebusContainer);
           rebusContainer.removeChild(rebusForm);
         } else {

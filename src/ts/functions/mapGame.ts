@@ -54,7 +54,6 @@ export function mapGame(container: HTMLDivElement) {
 }
 
 export function displayMaps(maps: MapItem[], mapContainer: HTMLDivElement) {
-  let finishedMapGame: boolean = false;
   for (let i = 0; i < maps.length; i++) {
     mapContainer.innerHTML = "";
     const mapForm: HTMLFormElement = document.createElement("form");
@@ -92,11 +91,7 @@ export function displayMaps(maps: MapItem[], mapContainer: HTMLDivElement) {
         maps.push(mapItems[i++]);
         displayMaps(maps, mapContainer);
         if (maps[i].name === "kalmar") {
-          finishedMapGame = true;
-          localStorage.setItem(
-            "finshedMapGame",
-            JSON.stringify(finishedMapGame)
-          );
+          timeline(mapContainer);
         }
       } else {
         mapResult.innerHTML = "Försök igen";
